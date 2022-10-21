@@ -1,4 +1,4 @@
-import { useMatomo } from '@m4tt72/matomo-tracker-react';
+// import { useMatomo } from '@m4tt72/matomo-tracker-react';
 import React, { useEffect, useState } from 'react';
 import { commandExists } from '../../utils/commandExists';
 import { useShell } from '../../utils/shellProvider';
@@ -7,7 +7,7 @@ import { useTheme } from '../../utils/themeProvider';
 import { Ps1 } from '../ps1';
 
 export const Input = ({ inputRef, containerRef }) => {
-  const { trackEvent } = useMatomo();
+  // const { trackEvent } = useMatomo();
   const { theme } = useTheme();
   const [value, setValue] = useState('');
   const {
@@ -59,10 +59,10 @@ export const Input = ({ inputRef, containerRef }) => {
 
       setValue('');
 
-      trackEvent({
-        category: 'Command Executed',
-        action: value || 'no command',
-      });
+      // trackEvent({
+      //   category: 'Command Executed',
+      //   action: value || 'no command',
+      // });
     }
 
     if (event.key === 'ArrowUp') {

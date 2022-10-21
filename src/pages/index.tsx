@@ -1,4 +1,4 @@
-import { useMatomo } from '@m4tt72/matomo-tracker-react';
+// import { useMatomo } from '@m4tt72/matomo-tracker-react';
 import Head from 'next/head';
 import React from 'react';
 import { History } from '../components/history';
@@ -12,15 +12,15 @@ interface IndexPageProps {
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
-  const { trackPageView } = useMatomo();
+  // const { trackPageView } = useMatomo();
   const { history } = useShell();
   const { theme } = useTheme();
 
   const containerRef = React.useRef(null);
 
-  React.useEffect(() => {
-    trackPageView({});
-  }, []);
+  // React.useEffect(() => {
+  //   trackPageView({});
+  // }, []);
 
   React.useEffect(() => {
     if (inputRef.current) {
@@ -31,7 +31,9 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
   return (
     <>
       <Head>
-        <title>M4TT72 | Home</title>
+        <title>{config.title}</title>
+        <link rel="icon" href="/favicon.svg"></link>
+        <meta name="description" content="Full-stack developer, specialized in DevOps and different cloud providers such as AWS, Azure, GCP, etc. Experienced in containerization, container orchestration, infrastructure as code, and other DevOps perks."></meta>
       </Head>
 
       <div

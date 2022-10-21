@@ -1,10 +1,24 @@
 {
-  "bioUrl": "https://raw.githubusercontent.com/m4tt72/m4tt72/master/README.md",
+  "title": "/home/solacens",
+  "bannerUrl": "https://raw.githubusercontent.com/solacens/terminal/main/banner.tpl",
+  "bioUrl": "https://raw.githubusercontent.com/solacens/solacens/master/README.md",
   "social": {
-    "instagram": "m4tt72",
-    "github": "m4tt72",
-    "linkedin": "yassinefathi"
+    "github": "solacens"
   },
-  "theme": "gruvboxdark",
-  "border": true
+  "theme": "atom",
+  "border": true,
+  "startWithBanner": true,
+  "hideCommands": [
+    "secretcmd",
+    "emacs",
+    "gui",
+    "instagram",
+    "linkedin",
+    "projects",
+    "repo",
+    "sudo",
+    "theme",
+    "vi",
+    "vim"
+  ]
 }

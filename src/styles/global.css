@@ -3,20 +3,36 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'CascadiaCode';
-  src: url(/assets/fonts/CascadiaCode.ttf);
+  font-family: 'VT323';
+  src: url(/assets/fonts/VT323-Regular.ttf);
   display: swap;
 }
 
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+
 * {
-  font-family: 'CascadiaCode', monospace;
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  letter-spacing: 0.15em;
+  animation-duration: 0.02s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 html,
 body,
-body > div:first-child,
+body>div:first-child,
 div#__next,
-div#__next > div {
+div#__next>div {
   height: 100%;
   overflow: auto;
 }

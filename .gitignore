@@ -45,3 +45,6 @@ jspm_packages
 _static/
 
 .vscode/
+
+# NextJS export
+out/
